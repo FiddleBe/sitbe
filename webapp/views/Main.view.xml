@@ -7,13 +7,11 @@
 			displayBlock="true" >
 
     <Page   title="{i18n>appTitle}" 
-            showHeader="true"
 			showNavButton="false">
 
         <uxap:ObjectPageLayout  id="Detail" 
                                 enableLazyLoading="true" 
-                                useIconTabBar="false"
-                                showHeader="false">
+                                useIconTabBar="false">
             <uxap:headerContent>
                 <Text text="{i18n>appDescription}" />    
             </uxap:headerContent>

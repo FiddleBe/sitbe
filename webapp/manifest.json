@@ -59,8 +59,8 @@
 		"models": {
 			"info": {
 				"type": "sap.ui.model.json.JSONModel",
+                "dataSource":"info",
 				"settings": {
-                    "datasource":"info"
 				}
 			},
 			"i18n": {
