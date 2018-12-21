@@ -1,0 +1,73 @@
+<mvc:View	controllerName="be.fiddle.sitbe.controllers.Main" 
+			xmlns:html="http://www.w3.org/1999/xhtml" 
+			xmlns:uxap="sap.uxap"
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			height="100%"
+			displayBlock="true" >
+
+    <Page   title="{i18n>appTitle}" 
+            showHeader="true"
+			showNavButton="false">
+
+        <uxap:ObjectPageLayout  id="Detail" 
+                                enableLazyLoading="true" 
+                                useIconTabBar="false"
+                                showHeader="false">
+            <uxap:headerContent>
+                <Text text="{i18n>appDescription}" />    
+            </uxap:headerContent>
+
+            <uxap:sections>
+                <!--overview-->
+                <uxap:ObjectPageSection id="tabOverview" title="{i18n>be.fiddle.sitbe.overview}">
+                    <!--description-->
+                    <uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.description}">
+                        <FormattedText htmlText="" />							
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+
+                <!--sessions-->
+                <uxap:ObjectPageSection 
+                    id="tabsessions" 
+                    title="{i18n>be.fiddle.sitbe.sessions}" 
+                    subSections="{path:'info>/sessions', sorter:{path:'timestamp'}}">
+                    <uxap:ObjectPageSubSection title="{info>name}">
+                        <FormattedText htmlText="{info>description}" />
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+
+                <!--participants-->
+                <uxap:ObjectPageSection 
+                    id="tabMethods" 
+                    title="{i18n>be.fiddle.sitbe.participants}" >
+                    <uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants}">
+                        <Table 
+                            items="{path:'info>/participants', sorter:{path:'name'}}"
+                            class="sapUiLargeMarginBottom">
+                            <columns>
+                                <Column width="7rem">
+                                    <Text text="Name"/>
+                                </Column>
+                                <Column width="9rem">
+                                    <Text text="Twitter Handle"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <ObjectIdentifier title="{info>name}" />
+                                        <Text text="{path:'info>twitterHandle'}" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+
+
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+    </Page>
+</mvc:View>

@@ -1,0 +1,14 @@
+{
+	"name": "be.fiddle.sitbe",
+	"version": "0.1.0",
+	"description": "SAP Insiders Track Belgium",
+	"private": true,
+	"author": "SITBe",
+	"devDependencies": {
+		"grunt": "~0.4.5",
+		"grunt-openui5": "latest",
+		"grunt-contrib-clean": "~1.0.0",
+		"grunt-contrib-copy": "~1.0.0",
+		"grunt-nwabap-ui5uploader": "latest"
+	}
+}

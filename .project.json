@@ -1,0 +1,13 @@
+{
+  "run": [
+    {
+      "filePath": "/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "urlParameters": null,
+      "_metadata": {
+      }
+    }
+  ]
+}
