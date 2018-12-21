@@ -1,6 +1,25 @@
 {
-    "sessions":[],
-    "sponsors":[],
-    "attendees":[],
+    "sessions":[
+        {
+            "name":"Something with security",
+            "speaker": "Joris De Vis"
+        },
+        {
+            "name":"I Have Issues",
+            "speaker":"Tom Van Doorslaer"
+        }
+    ],
+    "sponsors":[
+        {
+            "name":"Flexso",
+            "logo":""
+        }
+    ],
+    "participants":[
+        {
+            "name":"Wouter Lemaire",
+            "twitterHandle":""
+        }
+    ],
     "address":[]    
 }
