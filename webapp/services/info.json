@@ -1,25 +1,40 @@
 {
-    "sessions":[
-        {
-            "name":"Something with security",
-            "speaker": "Joris De Vis"
-        },
-        {
-            "name":"I Have Issues",
-            "speaker":"Tom Van Doorslaer"
-        }
-    ],
-    "sponsors":[
-        {
-            "name":"Flexso",
-            "logo":""
-        }
-    ],
-    "participants":[
-        {
-            "name":"Wouter Lemaire",
-            "twitterHandle":""
-        }
-    ],
-    "address":[]    
+	"sessions": [{
+		"name": "Something with security",
+		"speaker": "Joris De Vis"
+	}, {
+		"name": "I Have Issues",
+		"speaker": "Tom Van Doorslaer"
+	}, {
+		"name": "Automated testing in UI5 apps",
+		"speaker": "Pieter-Jan Deraedt"
+	}, {
+		"name": "Hunting Zombies the SCP-Way",
+		"speaker": "Christian Drumm"
+	}, {
+		"name": "Smart Coffee Machine – SAP Leonardo IoT Service",
+		"speaker": "Dries Van Vaerenbergh & Wouter Lemaire"
+	}],
+	"location": {
+		"name": "Flexso Nv",
+		"street": "Veldkant 33/A",
+		"city": "2550 Kontich",
+		"country": "Belgium"
+	},
+	"host": {
+		"name": "Flexso",
+		"logo": "./images/flexso.png"
+	},
+	"sponsors": [{
+		"name": "SAP Mentors",
+		"logo": "./images/mentors.png"
+	}, {
+		"name": "...",
+		"logo": ""
+	}],
+	"participants": [{
+		"name": "Wouter Lemaire",
+		"twitterHandle": ""
+	}],
+	"address": []
 }

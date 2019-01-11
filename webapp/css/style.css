@@ -1,0 +1,7 @@
+.bgHeader{
+	background-image:url("../images/SLogo_SITBRU.png");
+	width:100%;
+}
+.ObjectPageRoot > .sapUxAPObjectPageWrapper > .sapUxAPObjectPageScroll > header > div {
+	padding-left:0rem !important;
+}

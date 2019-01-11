@@ -1,71 +1,89 @@
-<mvc:View	controllerName="be.fiddle.sitbe.controllers.Main" 
-			xmlns:html="http://www.w3.org/1999/xhtml" 
-			xmlns:uxap="sap.uxap"
-			xmlns:mvc="sap.ui.core.mvc" 
-			xmlns="sap.m"
-			height="100%"
-			displayBlock="true" >
-
-    <Page   title="{i18n>appTitle}" 
-			showNavButton="false">
-
-        <uxap:ObjectPageLayout  id="Detail" 
-                                enableLazyLoading="true" 
-                                useIconTabBar="false">
-            <uxap:headerContent>
-                <Text text="{i18n>appDescription}" />    
-            </uxap:headerContent>
-
-            <uxap:sections>
-                <!--overview-->
-                <uxap:ObjectPageSection id="tabOverview" title="{i18n>be.fiddle.sitbe.overview}">
-                    <!--description-->
-                    <uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.description}">
-                        <FormattedText htmlText="" />							
-                    </uxap:ObjectPageSubSection>
-                </uxap:ObjectPageSection>
-
-                <!--sessions-->
-                <uxap:ObjectPageSection 
-                    id="tabsessions" 
-                    title="{i18n>be.fiddle.sitbe.sessions}" 
-                    subSections="{path:'info>/sessions', sorter:{path:'timestamp'}}">
-                    <uxap:ObjectPageSubSection title="{info>name}">
-                        <FormattedText htmlText="{info>description}" />
-                    </uxap:ObjectPageSubSection>
-                </uxap:ObjectPageSection>
-
-                <!--participants-->
-                <uxap:ObjectPageSection 
-                    id="tabMethods" 
-                    title="{i18n>be.fiddle.sitbe.participants}" >
-                    <uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants}">
-                        <Table 
-                            items="{path:'info>/participants', sorter:{path:'name'}}"
-                            class="sapUiLargeMarginBottom">
-                            <columns>
-                                <Column width="7rem">
-                                    <Text text="Name"/>
-                                </Column>
-                                <Column width="9rem">
-                                    <Text text="Twitter Handle"/>
-                                </Column>
-                            </columns>
-                            <items>
-                                <ColumnListItem>
-                                    <cells>
-                                        <ObjectIdentifier title="{info>name}" />
-                                        <Text text="{path:'info>twitterHandle'}" />
-                                    </cells>
-                                </ColumnListItem>
-                            </items>
-                        </Table>
-
-
-                    </uxap:ObjectPageSubSection>
-                </uxap:ObjectPageSection>
-
-            </uxap:sections>
-        </uxap:ObjectPageLayout>
-    </Page>
+<mvc:View controllerName="be.fiddle.sitbe.controllers.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" displayBlock="true" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Page title="{i18n>appTitle}" showHeader="false" showNavButton="false">
+		<uxap:ObjectPageLayout id="Detail" enableLazyLoading="true" useIconTabBar="false" class="ObjectPageRoot">
+			<uxap:headerContent>
+				<l:HorizontalLayout class="sapUiNoContentPadding sapUiNoMargin">
+					<Image src="images/SLogo_SITBRU.png" width="100%"/>
+					<!--<Text text="{i18n>appDescription}"/>-->
+				</l:HorizontalLayout>
+			</uxap:headerContent>
+			<uxap:sections>
+				<!--overview-->
+				<uxap:ObjectPageSection id="tabOverview" title="{i18n>be.fiddle.sitbe.overview}">
+					<!--description-->
+					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.overview}">
+						<Text text="{i18n>appDescription}"/>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+				<!--sessions-->
+				<uxap:ObjectPageSection id="tabsessions" title="{i18n>be.fiddle.sitbe.sessions}" subSections="{path:'info>/sessions'}">
+					<uxap:ObjectPageSubSection title="{info>name}">
+						<FormattedText htmlText="{i18n>be.fiddle.sitbe.speaker}: {info>speaker}"/>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+				<!--participants-->
+				<uxap:ObjectPageSection id="tabMethods" title="{i18n>be.fiddle.sitbe.participants}">
+					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants}">
+						<Table items="{path:'info>/participants', sorter:{path:'name'}}" class="sapUiLargeMarginBottom">
+							<columns>
+								<Column width="7rem">
+									<Text text="Name"/>
+								</Column>
+								<Column width="9rem">
+									<Text text="Twitter Handle"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<ObjectIdentifier title="{info>name}"/>
+										<Text text="{path:'info>twitterHandle'}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+				<!--host-->
+				<uxap:ObjectPageSection id="tabLocation" title="{i18n>be.fiddle.sitbe.location}">
+					<!--description-->
+					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.location}">
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="1" labelSpanL="2"
+								labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+								columnsL="1" columnsM="1" singleContainerFullSize="false">
+								<f:content>
+									<Label text="{i18n>be.fiddle.sitbe.name}"/>
+									<Text text="{info>/location/name}"/>
+									<Label text="{i18n>be.fiddle.sitbe.street}"/>
+									<Text text="{info>/location/street}"/>
+									<Label text="{i18n>be.fiddle.sitbe.city}"/>
+									<Text text="{info>/location/city}"/>
+									<Label text="{i18n>be.fiddle.sitbe.country}"/>
+									<Text text="{info>/location/country}"/>
+								</f:content>
+							</f:SimpleForm>
+							<core:HTML content='&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10012.652284747743!2d4.4422205!3d51.1423439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ea2f56487a3e382!2sFlexso+Nv!5e0!3m2!1snl!2sde!4v1547229769390&quot; width=&quot;100%&quot; height=&quot;500&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot; allowfullscreen&gt;&lt;/iframe&gt;'></core:HTML>
+						</VBox>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+				<!--host-->
+				<uxap:ObjectPageSection id="tabHost" title="{i18n>be.fiddle.sitbe.host}">
+					<!--description-->
+					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.host}">
+						<Image src="{info>/host/logo}"/>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+				<!--sponsors-->
+				<uxap:ObjectPageSection id="tabSponsor" title="{i18n>be.fiddle.sitbe.sponsors}" subSections="{path:'info>/sponsors'}">
+					<!--description-->
+					<uxap:ObjectPageSubSection title="{info>name}">
+						<Image src="{info>logo}"/>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Page>
 </mvc:View>
