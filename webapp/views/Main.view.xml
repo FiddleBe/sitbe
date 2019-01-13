@@ -21,6 +21,7 @@
 				<uxap:ObjectPageSection id="tabsessions" title="{i18n>be.fiddle.sitbe.sessions}" subSections="{path:'info>/sessions'}">
 					<uxap:ObjectPageSubSection title="{info>name}">
 						<FormattedText htmlText="{i18n>be.fiddle.sitbe.speaker}: {info>speaker}"/>
+						<FormattedText htmlText="{info>description}" width="100%"/>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--participants-->
@@ -39,7 +40,7 @@
 								<ColumnListItem>
 									<cells>
 										<ObjectIdentifier title="{info>name}"/>
-										<Text text="{path:'info>twitterHandle'}"/>
+										<Link href="https://twitter.com/{info>twitterHandle}"  text="{path:'info>twitterHandle'}"/>
 									</cells>
 								</ColumnListItem>
 							</items>
@@ -73,14 +74,14 @@
 				<uxap:ObjectPageSection id="tabHost" title="{i18n>be.fiddle.sitbe.host}">
 					<!--description-->
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.host}">
-						<Image src="{info>/host/logo}"/>
+						<Image src="{info>/host/logo}"  width="240px"/>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--sponsors-->
 				<uxap:ObjectPageSection id="tabSponsor" title="{i18n>be.fiddle.sitbe.sponsors}" subSections="{path:'info>/sponsors'}">
 					<!--description-->
 					<uxap:ObjectPageSubSection title="{info>name}">
-						<Image src="{info>logo}"/>
+						<Image src="{info>logo}" width="240px"/>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 			</uxap:sections>
