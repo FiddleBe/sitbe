@@ -1,6 +1,6 @@
 <mvc:View controllerName="be.fiddle.sitbe.controllers.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap"
-	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" displayBlock="true" xmlns:l="sap.ui.layout"
-	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
 	<Page title="{i18n>appTitle}" showHeader="false" showNavButton="false">
 		<uxap:ObjectPageLayout id="Detail" enableLazyLoading="true" useIconTabBar="false" class="ObjectPageRoot">
 			<uxap:headerContent>
@@ -14,7 +14,14 @@
 				<uxap:ObjectPageSection id="tabOverview" title="{i18n>be.fiddle.sitbe.overview}">
 					<!--description-->
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.overview}">
-						<Text text="{i18n>appDescription}"/>
+						<l:VerticalLayout>
+							<Text text="{i18n>appDescription}"/>
+							<l:HorizontalLayout>
+								<Text text="{i18n>be.fiddle.sitbe.sessionDescription}"/>
+								<Link text="{i18n>be.fiddle.sitbe.session}" emphasized="true" target="_blank"
+									href="https://docs.google.com/forms/d/e/1FAIpQLSemeYm9An9S7k7hrfhm468dzCYEwO3GbU2k8jftBwvvOQHnzw/viewform?usp=sf_link"/>
+							</l:HorizontalLayout>
+						</l:VerticalLayout>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--sessions-->
@@ -27,7 +34,15 @@
 				<!--participants-->
 				<uxap:ObjectPageSection id="tabMethods" title="{i18n>be.fiddle.sitbe.participants}">
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants}">
-						<Table items="{path:'info>/participants', sorter:{path:'name'}}" class="sapUiLargeMarginBottom">
+						<Table items="{path:'/Events(59)/Participants'}" class="sapUiLargeMarginBottom">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Link text="{i18n>be.fiddle.sitbe.registerhere}" emphasized="true" target="_blank"
+											href="https://sitregparticipant-a5a504e08.dispatcher.hana.ondemand.com/index.html#/Events/59"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
 							<columns>
 								<Column width="7rem">
 									<Text text="Name"/>
@@ -39,8 +54,8 @@
 							<items>
 								<ColumnListItem>
 									<cells>
-										<ObjectIdentifier title="{info>name}"/>
-										<Link href="https://twitter.com/{info>twitterHandle}"  text="{path:'info>twitterHandle'}"/>
+										<ObjectIdentifier title="{FirstName} {LastName}"/>
+										<Link href="https://twitter.com/{Twitter}" text="{path:'Twitter'}"/>
 									</cells>
 								</ColumnListItem>
 							</items>
@@ -52,9 +67,9 @@
 					<!--description-->
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.location}">
 						<VBox class="sapUiSmallMargin">
-							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="1" labelSpanL="2"
-								labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
-								columnsL="1" columnsM="1" singleContainerFullSize="false">
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="1" labelSpanL="2" labelSpanM="3" labelSpanS="12"
+								adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+								singleContainerFullSize="false">
 								<f:content>
 									<Label text="{i18n>be.fiddle.sitbe.name}"/>
 									<Text text="{info>/location/name}"/>
@@ -66,7 +81,8 @@
 									<Text text="{info>/location/country}"/>
 								</f:content>
 							</f:SimpleForm>
-							<core:HTML content='&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10012.652284747743!2d4.4422205!3d51.1423439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ea2f56487a3e382!2sFlexso+Nv!5e0!3m2!1snl!2sde!4v1547229769390&quot; width=&quot;100%&quot; height=&quot;500&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot; allowfullscreen&gt;&lt;/iframe&gt;'></core:HTML>
+							<core:HTML
+								content='&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10012.652284747743!2d4.4422205!3d51.1423439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ea2f56487a3e382!2sFlexso+Nv!5e0!3m2!1snl!2sde!4v1547229769390&quot; width=&quot;100%&quot; height=&quot;500&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot; allowfullscreen&gt;&lt;/iframe&gt;'></core:HTML>
 						</VBox>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
@@ -74,7 +90,7 @@
 				<uxap:ObjectPageSection id="tabHost" title="{i18n>be.fiddle.sitbe.host}">
 					<!--description-->
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.host}">
-						<Image src="{info>/host/logo}"  width="240px"/>
+						<Image src="{info>/host/logo}" width="240px"/>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--sponsors-->

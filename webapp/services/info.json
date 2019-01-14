@@ -10,11 +10,11 @@
 	}, {
 		"name": "Automated testing in UI5 apps",
 		"speaker": "Pieter-Jan Deraedt",
-		"description": "to be added"
+		"description": "Session about the usage of QUnit and OPA tests in UI5 applications"
 	}, {
 		"name": "Hunting Zombies the SCP-Way",
 		"speaker": "Christian Drumm",
-		"description": "to be added"
+		"description": "In my session I'll show how the SCP can be used to survive in a world after the zombie apocalypse."
 	}, {
 		"name": "Smart Coffee Machine – SAP Leonardo IoT Service",
 		"speaker": "Dries Van Vaerenbergh & Wouter Lemaire",
@@ -23,6 +23,10 @@
 		"name": "Migrate to S/4Hana in 30 minutes [To Be Confirmed]",
 		"speaker": "Koen Labie",
 		"description": "There's good chance that you're currently on a migration track to S/4Hana, or will soon be starting one. Learn some do's and don'ts from previous experiences and get to grips with the theory behind such an undertaking."
+	},{
+		"name":"Domain-driven design, ABAP and SAP Cloud Platform",
+		"speaker":"Tudor Riscutia",
+		"description":"Inspired by the #sitNL talk 'How Domain-Driven Design can help you to become a better developer' by Fred Verheul, we would like to share some experience in learning and applying Domain-driven design (DDD) around SAP environments both in the cloud (using the S/4HANA Cloud SDK) and on-premise (ABAP Programming Model for SAP Fiori)."
 	}],
 	"location": {
 		"name": "Flexso Nv",

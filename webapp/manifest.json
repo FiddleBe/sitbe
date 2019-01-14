@@ -15,7 +15,19 @@
 			"info": {
 				"uri": "./services/info.json",
 				"type": "JSON"
+			},
+			"service.xsodata": {
+				"uri": "/destinations/HANAMDC/com/sap/sapmentors/sitreg/odatapublic/service.xsodata/destinations/HANAMDC/com/sap/sapmentors/sitreg/odatapublic/service.xsodata/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
 			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
 		}
 	},
 	"sap.ui": {
@@ -69,6 +81,16 @@
 				"settings": {
 					"bundleName": "be.fiddle.sitbe.i18n.i18n"
 				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "service.xsodata",
+				"preload": true
 			}
 		},
 		"resources": {
