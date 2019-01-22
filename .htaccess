@@ -1,0 +1,18 @@
+# ----------------------------------------------------------------------
+# Allow loading of external fonts
+# ----------------------------------------------------------------------
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^/services/participants.php/(.*)  /services/participants.php?extra=$1
+
+<FilesMatch "\.(ttf|otf|eot|woff|js|json|properties|xsodata)$">
+    <IfModule mod_headers.c>
+        SetEnvIf Origin "http(s)?://(www\.)?(fiddle.be|dev.fiddle.be|resources.fiddle.be|insurance.fiddle.be|BusinessObjectModel.fiddle.be)$" AccessControlAllowOrigin=$0
+        Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+        Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type, maxdataserviceversion, sap-cancel-on-close, sap-contextid-accept"
+        Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    </IfModule>
+</FilesMatch>

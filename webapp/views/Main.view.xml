@@ -34,7 +34,7 @@
 				<!--participants-->
 				<uxap:ObjectPageSection id="tabMethods" title="{i18n>be.fiddle.sitbe.participants}">
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants}">
-						<Table items="{path:'/Events(59)/Participants'}" class="sapUiLargeMarginBottom">
+						<Table items="{path:'participants>/Events(59)/Participants'}" class="sapUiLargeMarginBottom">
 							<headerToolbar>
 								<Toolbar>
 									<content>
@@ -54,8 +54,8 @@
 							<items>
 								<ColumnListItem>
 									<cells>
-										<ObjectIdentifier title="{FirstName} {LastName}"/>
-										<Link href="https://twitter.com/{Twitter}" text="{path:'Twitter'}"/>
+										<ObjectIdentifier title="{participants>FirstName} {participants>LastName}"/>
+										<Link href="https://twitter.com/{Twitter}" text="{path:'participants>Twitter'}"/>
 									</cells>
 								</ColumnListItem>
 							</items>
