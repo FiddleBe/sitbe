@@ -16,8 +16,8 @@
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.overview}">
 						<l:VerticalLayout>
 							<ObjectHeader title="{i18n>be.fiddle.sitbe.savedate}"></ObjectHeader>
-							<FormattedText htmlText='{i18n>appDescription}  &lt;br /&gt; {i18n>be.fiddle.sitbe.sessionDescription} &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSemeYm9An9S7k7hrfhm468dzCYEwO3GbU2k8jftBwvvOQHnzw/viewform?usp=sf_link&quot; target=&quot;_blank&quot;&gt;{i18n&gt;be.fiddle.sitbe.session}&lt;/a&gt;'/>
-
+							<FormattedText
+								htmlText='{i18n>appDescription} &lt;br /&gt; {i18n>be.fiddle.sitbe.sessionDescription} &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSemeYm9An9S7k7hrfhm468dzCYEwO3GbU2k8jftBwvvOQHnzw/viewform?usp=sf_link&quot; target=&quot;_blank&quot;&gt;{i18n&gt;be.fiddle.sitbe.session}&lt;/a&gt;'/>
 						</l:VerticalLayout>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
@@ -95,6 +95,24 @@
 					<!--description-->
 					<uxap:ObjectPageSubSection title="{info>name}">
 						<Image src="{info>logo}" width="240px"/>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+				<!--contact us-->
+				<uxap:ObjectPageSection id="tabContact" title="{i18n>be.fiddle.sitbe.contact}">
+					<!--description-->
+					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.contact}">
+						<!--<l:VerticalLayout>-->
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="1" labelSpanL="2" labelSpanM="3" labelSpanS="12"
+								adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
+									<Label text="{i18n>be.fiddle.sitbe.mail}"/>
+									<Link href="mailto:sapinsidetrackbelgium@gmail.com" text="sapinsidetrackbelgium@gmail.com" target="_blank"></Link>
+									<Label text="{i18n>be.fiddle.sitbe.twitter}"/>
+									<Link href="https://twitter.com/sitbru" text="#sitbru" target="_blank"></Link>
+								</f:content>
+							</f:SimpleForm>
+						<!--</l:VerticalLayout>-->
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 			</uxap:sections>
