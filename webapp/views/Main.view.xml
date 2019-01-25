@@ -24,8 +24,10 @@
 				<!--sessions-->
 				<uxap:ObjectPageSection id="tabsessions" title="{i18n>be.fiddle.sitbe.sessions}" subSections="{path:'info>/sessions'}">
 					<uxap:ObjectPageSubSection title="{info>name}">
-						<FormattedText htmlText="{i18n>be.fiddle.sitbe.speaker}: {info>speaker}"/>
-						<FormattedText htmlText="{info>description}" width="100%"/>
+						<VBox>
+							<FormattedText htmlText="{i18n>be.fiddle.sitbe.speaker}: {info>speaker}"/>
+							<FormattedText htmlText="{info>description}" width="100%"/>
+						</VBox>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--participants-->
