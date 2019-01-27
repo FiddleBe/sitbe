@@ -31,8 +31,8 @@
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--participants-->
-				<uxap:ObjectPageSection id="tabMethods" title="{i18n>be.fiddle.sitbe.participants}">
-					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants}">
+				<uxap:ObjectPageSection id="tabParticipants" title="{i18n>be.fiddle.sitbe.participants} ">
+					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants} ({parts:['participants>/Events(59)/Participants'],formatter:'.getLength'} / 50)" >
 						<Table items="{path:'participants>/Events(59)/Participants'}" class="sapUiLargeMarginBottom">
 							<headerToolbar>
 								<Toolbar>

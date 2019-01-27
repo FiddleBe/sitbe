@@ -7,6 +7,13 @@ sap.ui.define(
         	
         });
 
+        Main.prototype.getLength = function(array){
+            if(Array.isArray(array)){
+                return "" + array.length;
+            }
+            return "0";
+        }
+
         return Main;
     }
 );
