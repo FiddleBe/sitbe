@@ -1,7 +1,7 @@
 <mvc:View controllerName="be.fiddle.sitbe.controllers.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	xmlns:core="sap.ui.core">
-	<Page title="{i18n>appTitle}" showHeader="false" showNavButton="false">
+	<Page title="{i18n>appTitle}" showHeader="false" showNavButton="false" >
 		<uxap:ObjectPageLayout id="Detail" enableLazyLoading="true" useIconTabBar="false" class="ObjectPageRoot">
 			<uxap:headerContent>
 				<l:HorizontalLayout class="sapUiNoContentPadding sapUiNoMargin">
@@ -32,33 +32,34 @@
 				</uxap:ObjectPageSection>
 				<!--participants-->
 				<uxap:ObjectPageSection id="tabParticipants" title="{i18n>be.fiddle.sitbe.participants} ">
-					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.participants} ({parts:['participants>/Events(59)/Participants'],formatter:'.getLength'} / 50)" >
-						<Table items="{path:'participants>/Events(59)/Participants'}" class="sapUiLargeMarginBottom">
-							<headerToolbar>
-								<Toolbar>
-									<content>
-										<Link text="{i18n>be.fiddle.sitbe.registerhere}" emphasized="true" target="_blank"
-											href="https://sitregparticipant-a5a504e08.dispatcher.hana.ondemand.com/index.html#/Events/59"/>
-									</content>
-								</Toolbar>
-							</headerToolbar>
-							<columns>
-								<Column width="7rem">
-									<Text text="Name"/>
-								</Column>
-								<Column width="9rem">
-									<Text text="Twitter Handle"/>
-								</Column>
-							</columns>
-							<items>
-								<ColumnListItem>
-									<cells>
-										<ObjectIdentifier title="{participants>FirstName} {participants>LastName}"/>
-										<Link href="https://twitter.com/{Twitter}" text="{path:'participants>Twitter'}"/>
-									</cells>
-								</ColumnListItem>
-							</items>
-						</Table>
+					<uxap:ObjectPageSubSection
+						title="{i18n>be.fiddle.sitbe.participants} ({= ${participants>Participants}.length } / 50)">
+							<Table items="{path:'participants>Participants'}" class="sapUiLargeMarginBottom">
+								<headerToolbar>
+									<Toolbar>
+										<content>
+											<Link text="{i18n>be.fiddle.sitbe.registerhere}" emphasized="true" target="_blank"
+												href="https://sitregparticipant-a5a504e08.dispatcher.hana.ondemand.com/index.html#/Events/59"/>
+										</content>
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column width="7rem">
+										<Text text="Name"/>
+									</Column>
+									<Column width="9rem">
+										<Text text="Twitter Handle"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<ObjectIdentifier title="{participants>FirstName} {participants>LastName}"/>
+											<Link href="https://twitter.com/{Twitter}" text="{path:'participants>Twitter'}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--host-->
@@ -104,16 +105,16 @@
 					<!--description-->
 					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.contact}">
 						<!--<l:VerticalLayout>-->
-							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="1" labelSpanL="2" labelSpanM="3" labelSpanS="12"
-								adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-								singleContainerFullSize="false">
-								<f:content>
-									<Label text="{i18n>be.fiddle.sitbe.mail}"/>
-									<Link href="mailto:sapinsidetrackbelgium@gmail.com" text="sapinsidetrackbelgium@gmail.com" target="_blank"></Link>
-									<Label text="{i18n>be.fiddle.sitbe.twitter}"/>
-									<Link href="https://twitter.com/sitbru" text="#sitbru" target="_blank"></Link>
-								</f:content>
-							</f:SimpleForm>
+						<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="1" labelSpanL="2" labelSpanM="3" labelSpanS="12"
+							adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+							singleContainerFullSize="false">
+							<f:content>
+								<Label text="{i18n>be.fiddle.sitbe.mail}"/>
+								<Link href="mailto:sapinsidetrackbelgium@gmail.com" text="sapinsidetrackbelgium@gmail.com" target="_blank"></Link>
+								<Label text="{i18n>be.fiddle.sitbe.twitter}"/>
+								<Link href="https://twitter.com/sitbru" text="#sitbru" target="_blank"></Link>
+							</f:content>
+						</f:SimpleForm>
 						<!--</l:VerticalLayout>-->
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>

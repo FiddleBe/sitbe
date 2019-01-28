@@ -23,7 +23,8 @@
       "path": "/destinations/HANAMDC/com/sap/sapmentors/sitreg/odatapublic/service.xsodata",
       "target": {
         "type": "destination",
-        "name": "SITParticipants"
+        "name": "SITParticipants",
+        "entryPath": "/destinations/HANAMDC/com/sap/sapmentors/sitreg/odatapublic/service.xsodata"
       },
       "description": "SIT Participants"
     },

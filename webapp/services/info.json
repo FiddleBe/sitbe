@@ -27,6 +27,10 @@
 		"name":"Domain-driven design, ABAP and SAP Cloud Platform",
 		"speaker":"Tudor Riscutia",
 		"description":"Inspired by the #sitNL talk 'How Domain-Driven Design can help you to become a better developer' by Fred Verheul, we would like to share some experience in learning and applying Domain-driven design (DDD) around SAP environments both in the cloud (using the S/4HANA Cloud SDK) and on-premise (ABAP Programming Model for SAP Fiori)."
+	},{
+		"name":"Cloud qualities out-of-the-box: Development and continuous delivery of high-quality enterprise apps on SAP Cloud Platform",
+		"speaker":"Marco Dahms (SAP)",
+		"description":"While running enterprise software in the cloud, we can decouple its lifecycle from that of the legacy enterprise systems maintained by the IT organizations residing on-premise. While the IT department is usually reluctant to enhance the functional scope of their legacy enterprise applications in order to reduce the risk of outages, we can provide new innovations to the business in a faster pace through the SAP Cloud Platform. The development of such cloud extensions shall be quick and efficient and lead to applications that meet high quality standards. In addition, business expects to receive new innovations instantly and frequently. To fulfill both expectations at the same time, you may use the S/4HANA Cloud SDK and its open-source Continuous Delivery Toolkit provided by SAP. In this talk, we will outline how this SDK simplifies the development process and helps to integrate new cloud solutions with legacy enterprise systems. We will also present a pre-configured, out-of-the-box delivery pipeline that requires minimal setup effort and ensures that the delivered software fulfills the expected quality criteria."
 	}],
 	"location": {
 		"name": "Flexso Nv",
