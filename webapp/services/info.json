@@ -50,8 +50,8 @@
 		"name": "SAP Mentors",
 		"logo": "./images/mentors.png"
 	}, {
-		"name": "...",
-		"logo": ""
+		"name": "SAP Community",
+		"logo": "./images/SAPCommunity.png"
 	}],
 	"participants": [{
 		"name": "Wouter Lemaire",
