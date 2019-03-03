@@ -35,6 +35,10 @@
 		"name":"Hitchhikers Guide to the Legacy",
 		"speaker":"Laurens van Rijn",
 		"description":"Handling legacy code"
+	},{
+		"name":"ABAP To The Future",
+		"speaker":"Paul Hardy",
+		"description":"Details to be added"
 	}],
 	"location": {
 		"name": "Flexso Nv",
