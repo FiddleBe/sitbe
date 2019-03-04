@@ -35,6 +35,10 @@
 		"name":"Hitchhikers Guide to the Legacy",
 		"speaker":"Laurens van Rijn",
 		"description":"Handling legacy code"
+	},{
+		"name":"The Future of ABAP Programming",
+		"speaker":"Paul Hardy",
+		"description":"All that you know is at an end. This is in regard to both version management - CTS => abapGit and even the very nature of ABAP programming \"the so called RESTful ABAP programming model\" which SAP are working on. I am on the inside of both initiatives and want to share with you all the non-secret things I can..."
 	}],
 	"location": {
 		"name": "Flexso Nv",
