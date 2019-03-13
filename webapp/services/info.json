@@ -39,6 +39,10 @@
 		"name":"The Future of ABAP Programming",
 		"speaker":"Paul Hardy",
 		"description":"All that you know is at an end. This is in regard to both version management - CTS => abapGit and even the very nature of ABAP programming \"the so called RESTful ABAP programming model\" which SAP are working on. I am on the inside of both initiatives and want to share with you all the non-secret things I can..."
+	},{
+		"name":"Troubleshooting and debugging Node.js applications in SAP Cloud Platform Cloud Foundry",
+		"speaker":"Vadim Klimov",
+		"description":"The session will cover some practical hints and tips about increasing productivity of troubleshooting and particularly debugging Node.js applications that are deployed to SAP Cloud Platform Cloud Foundry. We will use classic options that require pausing application execution, as well as will see how verbose logging output can be collected dynamically for an application that is already running in debug mode. We will also apply described techniques to Node.js applications that involve source code transpiling - such as Node.js applications developed in TypeScript."
 	}],
 	"location": {
 		"name": "Flexso Nv",
