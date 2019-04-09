@@ -60,6 +60,9 @@
 	}, {
 		"name": "SAP Community",
 		"logo": "./images/SAPCommunity.png"
+	}, {
+		"name": "Espresso Tutorials",
+		"logo": "./images/ET.jpg"
 	}],
 	"participants": [{
 		"name": "Wouter Lemaire",
