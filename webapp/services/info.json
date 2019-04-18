@@ -63,30 +63,10 @@
 	}, {
 		"name": "Espresso Tutorials",
 		"logo": "./images/ET.jpg"
+	}, {
+		"name": "Fiddle Consulting",
+		"logo": "./images/fiddle.png"
 	}],
-	"participants": [{
-		"name": "Wouter Lemaire",
-		"twitterHandle": "wouter_lemaire"
-	},
-	{
-		"name": "Tom Van Doorslaer",
-		"twitterHandle": "TomVanDoo"
-	},
-	{
-		"name": "Joris Van De Vis",
-		"twitterHandle": "jvis"
-	},
-	{
-		"name": "Koen Labie",
-		"twitterHandle": "koenlabie"
-	},
-	{
-		"name": "Christian Drumm",
-		"twitterHandle": "ceedee666"
-	},
-	{
-		"name": "Pieter-Jan Deraedt",
-		"twitterHandle": "PJ_Deraedt"
-	}],
+	"participants": [],
 	"address": []
 }
