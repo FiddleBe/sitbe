@@ -60,6 +60,12 @@
 	}, {
 		"name": "SAP Community",
 		"logo": "./images/SAPCommunity.png"
+	}, {
+		"name": "Espresso Tutorials",
+		"logo": "./images/ET.jpg"
+	}, {
+		"name": "Fiddle Consulting",
+		"logo": "./images/fiddle.png"
 	}],
 	"participants": [],
 	"address": []
