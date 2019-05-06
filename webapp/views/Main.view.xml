@@ -1,6 +1,16 @@
-<mvc:View controllerName="be.fiddle.sitbe.controllers.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap"
-	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
-	xmlns:core="sap.ui.core">
+<mvc:View 
+	controllerName="be.fiddle.sitbe.controllers.Main" 
+	xmlns="sap.m" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:uxap="sap.uxap"
+	xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:unified="sap.ui.unified"
+	height="100%" 
+	displayBlock="true" >
+
 	<Page title="{i18n>appTitle}" showHeader="false" showNavButton="false" >
 		<uxap:ObjectPageLayout id="Detail" enableLazyLoading="true" useIconTabBar="false" class="ObjectPageRoot">
 			<uxap:headerContent>
@@ -22,12 +32,29 @@
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--sessions-->
-				<uxap:ObjectPageSection id="tabsessions" title="{i18n>be.fiddle.sitbe.sessions}" subSections="{path:'info>/sessions'}">
-					<uxap:ObjectPageSubSection title="{info>name}">
-						<VBox>
-							<FormattedText htmlText="{i18n>be.fiddle.sitbe.speaker}: {info>speaker}"/>
-							<FormattedText htmlText="{info>description}" width="100%"/>
-						</VBox>
+				<uxap:ObjectPageSection id="tabsessions" title="{i18n>be.fiddle.sitbe.sessions}">
+					<uxap:ObjectPageSubSection title="{i18n>be.fiddle.sitbe.sessions}">
+
+						<SinglePlanningCalendar
+							title= ""
+							startDate="{settings>/startdate}"
+							enableAppointmentsDragAndDrop="false"
+							stickyMode="None"
+							appointments="{info>/sessions}">
+							<views>
+								<SinglePlanningCalendarDayView key="DayView" title="Day" />
+							</views>
+							<appointments>
+								<unified:CalendarAppointment
+									type= "None"
+									title= "{info>name}"
+									text= "{info>description}"
+									startDate= "{info>startDate}"
+									endDate= "{info>endDate}">
+								</unified:CalendarAppointment>
+							</appointments>
+						</SinglePlanningCalendar>
+
 					</uxap:ObjectPageSubSection>
 				</uxap:ObjectPageSection>
 				<!--participants-->

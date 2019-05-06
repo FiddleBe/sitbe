@@ -63,7 +63,8 @@
 			"libs": {
 				"sap.m": {},
 				"sap.ui.core": {},
-				"sap.ui.layout": {}
+				"sap.ui.layout": {},
+				"sap.ui.unified":{}
 			}
 		},
 		"contentDensities": {
@@ -75,6 +76,9 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"dataSource": "info",
 				"settings": {}
+			},
+			"settings":{
+				"type": "sap.ui.model.json.JSONModel"
 			},
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
