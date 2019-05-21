@@ -31,6 +31,24 @@ sap.ui.define(
 
 			this.getView().getModel("info").setProperty("/sessions",sessions);
 		};
+		
+		Main.prototype.onClickSession = function(event){
+			//get the bindingcontext of the session
+			let source = event.getSource(); //using source variable for reuse later, since the event variable is binned after event cycle
+			let context = source.getBindingContext("info");
+			
+			if(context){
+				//instantiate the fragment:
+				Fragment.load("be.fiddle.sitbe.fragements.session").then( function( popover ){
+					//attach the bindingcontext to the fragment
+					popover.setBindingContext(context, "info"); //keep the same model name
+					popover.attachOnClose(function(event){ //make sure the popover is destroyed when it closes
+						popover.destroy();
+					});
+					popover.openBy(source);
+				}.bind(this));
+			}
+		};
 
 		return Main;
 	}
