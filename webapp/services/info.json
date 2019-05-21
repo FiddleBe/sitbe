@@ -33,7 +33,7 @@
 		"startdate":"2019-05-18T09:00:00.000Z",
 		"enddate":"2019-05-18T09:50:00.000Z",
 		"links":[
-			{ "url":""}
+			{ "url":"./services/FutureOfAbap.pdf"}
 		]
 	},{
 		"name":"Lunch",
