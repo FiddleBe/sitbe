@@ -1,6 +1,9 @@
 sap.ui.define(
-	["sap/ui/core/mvc/Controller"],
-	function (Controller) {
+	[
+		"sap/ui/core/mvc/Controller",
+		"sap/ui/core/Fragment"
+	],
+	function (Controller, Fragment) {
 		let Main = Controller.extend("be.fiddle.sitbe.controllers.Main",
 			/** @lends be.fiddle.sitbe.controller.Main.prototype */
 			{
@@ -34,15 +37,16 @@ sap.ui.define(
 		
 		Main.prototype.onClickSession = function(event){
 			//get the bindingcontext of the session
-			let source = event.getSource(); //using source variable for reuse later, since the event variable is binned after event cycle
+			let source = event.getParameter("appointment"); //using source variable for reuse later, since the event variable is binned after event cycle
 			let context = source.getBindingContext("info");
 			
 			if(context){
 				//instantiate the fragment:
-				Fragment.load("be.fiddle.sitbe.fragements.session").then( function( popover ){
+				Fragment.load({name:"be.fiddle.sitbe.fragments.Session"}).then( function( popover ){
 					//attach the bindingcontext to the fragment
+					this.getView().addDependent(popover);
 					popover.setBindingContext(context, "info"); //keep the same model name
-					popover.attachOnClose(function(event){ //make sure the popover is destroyed when it closes
+					popover.attachAfterClose(function(event){ //make sure the popover is destroyed when it closes
 						popover.destroy();
 					});
 					popover.openBy(source);

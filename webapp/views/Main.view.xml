@@ -40,7 +40,8 @@
 							startDate="{settings>/startdate}"
 							enableAppointmentsDragAndDrop="false"
 							stickyMode="None"
-							appointments="{info>/sessions}">
+							appointments="{info>/sessions}"
+							appointmentSelect="onClickSession">
 							<views>
 								<SinglePlanningCalendarDayView key="DayView" title="Day" />
 							</views>
@@ -50,7 +51,8 @@
 									title= "{info>name}"
 									text= "{info>description}"
 									startDate= "{info>startDate}"
-									endDate= "{info>endDate}">
+									endDate= "{info>endDate}"
+									>
 								</unified:CalendarAppointment>
 							</appointments>
 						</SinglePlanningCalendar>

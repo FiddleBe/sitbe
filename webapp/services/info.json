@@ -6,7 +6,7 @@
 		"startdate":"2019-05-18T07:30:00.000Z",
 		"enddate":"2019-05-18T08:00:00.000Z",
 		"links":[
-			{ "url":"./services/Keynote.pdf"}
+			{ "url":"./presentations/Keynote.pdf"}
 		]
 	},{
 		"name":"Cloud qualities out-of-the-box: Development and continuous delivery of high-quality enterprise apps on SAP Cloud Platform",
@@ -15,7 +15,7 @@
 		"startdate":"2019-05-18T08:00:00.000Z",
 		"enddate":"2019-05-18T08:50:00.000Z",
 		"links":[
-			{ "url":"./services/Development%20%26%20Delivery%20of%20Enterprise%20Cloud%20Apps%20with%20SAP%20Cloud%20SDK.pdf"}
+			{ "url":"./presentations/Development%20%26%20Delivery%20of%20Enterprise%20Cloud%20Apps%20with%20SAP%20Cloud%20SDK.pdf"}
 		]
 	},{
 		"name": "Hack the system",
@@ -33,7 +33,7 @@
 		"startdate":"2019-05-18T09:00:00.000Z",
 		"enddate":"2019-05-18T09:50:00.000Z",
 		"links":[
-			{ "url":"./services/FutureOfAbap.pdf"}
+			{ "url":"./presentations/FutureOfAbap.pdf"}
 		]
 	},{
 		"name":"Lunch",
@@ -46,7 +46,7 @@
 		"startdate":"2019-05-18T11:00:00.000Z",
 		"enddate":"2019-05-18T11:50:00.000Z",
 		"links":[
-			{ "url":"/services/sitBRU%20-%20HHGttLegacy.ppsx"}
+			{ "url":"/presentations/sitBRU%20-%20HHGttLegacy.ppsx"}
 		]
 	},{
 		"name": "I Have Issues",
@@ -55,7 +55,7 @@
 		"startdate":"2019-05-18T11:00:00Z",
 		"enddate":"2019-05-18T11:50:00Z",
 		"links":[
-			{ "url":"./services/issues.pdf"},
+			{ "url":"./presentations/issues.pdf"},
 			{"url":"https://gitlab.com/fiddlebe"}
 		]
 	},{
@@ -101,7 +101,7 @@
 		"startdate":"2019-05-18T14:00:00Z",
 		"enddate":"2019-05-18T15:30:00Z",
 		"links":[
-			{ "url":"./services/Wrapup.pdf"}
+			{ "url":"./presentations/Wrapup.pdf"}
 		]
 	},{
 		"name": "Dinner",

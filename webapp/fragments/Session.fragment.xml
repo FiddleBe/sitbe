@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ResponsivePopover
+		title="{info>name}"
+		class="sapUiPopupWithPadding"
+		placement="Bottom" >
+		<content>
+            <VBox>
+                <Title text="{info>speaker}"/>
+                <Text text="{info>description}"/>
+
+                <List headerText="Session material" items="{info>links}" >
+                    <CustomListItem>
+                        <Link text="{info>url}" href="{info>url}" target="_blank" />
+                    </CustomListItem>
+                </List>
+		    </VBox>
+        </content>
+	</ResponsivePopover>
+</core:FragmentDefinition>
